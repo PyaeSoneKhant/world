@@ -1,0 +1,61 @@
+<!doctype html>
+<!--country_added.html-->
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+	<body>
+		<h1>{{c['name']}}</h1>
+
+		<div class='properties'>
+			
+			<div>
+				<div>Capital</div>
+				<div>{{c['capital']}}</div>
+			</div>
+
+			<div>
+				<div>Continent</div>
+				<div><a href='../continent/{{c.continent}}'>{{c['continent']}}</a></div>
+			</div>
+
+			<div>
+				<div>Population</div>
+				<div>{{c['population']}}
+				</div>
+			</div>
+
+			<div>
+				<div>TLD</div>
+				<div>{{c['tld']}}</div>
+			</div>
+
+			<div>
+				<div>GDP (million $)</div>
+				<div>{{c['gdp']}}</div>
+			</div>
+
+			<div>
+				<div>Area(km2)</div>
+				<div>{{c['area']}}</div>
+		</div>
+
+		<div>
+		<div><img src="/static/flags/{{c['tld']}}.gif" class='big'></div>
+		</div>
+
+		<div>
+		<div class='edit-button'>
+			<a href='/editCountryByName/{{c.name}}'>Edit</a>
+		</div>
+		</div>
+
+		<div>
+		<div class='delete-button'>
+			<a href='/delete/{{c.name}}'>Delete</a>
+		</div>		
+		</div>
+		</div>
+
+	</body>
+</html>

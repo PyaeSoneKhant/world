@@ -1,0 +1,34 @@
+<!doctype html>
+<!--index.html-->
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+	<body>
+		<div class="container"></div>
+		<header>
+		<h1>Welcome from World Factbook</h1>
+		</header>
+		<div>There are {{w|length}} countries in in the world.</div>
+		<ul>
+			{% for c in w %}
+			<li><a href='/countryByName/{{c.name}}'> 
+			<img src='/static/flags/{{c["tld"]}}.gif' class='tiny'>
+			{{c.name}}</a>			
+			</li>
+			{% endfor %}
+		</ul>
+		<div class='nav_button'>
+			<a href='/begin/{{page_number-page_size}}'>Previous Page</a>
+		</div>
+		<div class='nav_button'>
+			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
+		</div>
+		<div class="new-button">
+		<a href="/addCountryByName/">New Country</a>
+		</div>
+
+		<footer>Copyright@World Factbook,Develop by PyaeSoneKhant</footer>
+	</div>
+	</body>
+</html>

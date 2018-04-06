@@ -1,0 +1,65 @@
+<!doctype html>
+<!--country_add.html-->
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+	<body>
+
+		<form action='/AddCountry/'>
+		<div class='properties'>
+			<div>
+				<div><input name='name' value="{{c['name']}}"></div>
+			</div>
+			<div>
+				<div>Capital</div>
+				<div><input name='capital'
+				        value="{{c['capital']}}"></div>
+			</div>
+			<div>
+				<div>Continent</div>
+				<div>
+				  <input name='continent'
+				    value="{{c['continent']}}">
+				</div>
+			</div>
+			<div>
+				<div>Population</div>
+				<input name='population'
+				    value="{{c['population']}}">
+				</div>
+			</div>
+			<div>
+				<div>GDP (million $)</div>
+				<input name='gdp'
+				    value="{{c['gdp']}}">
+				</div>
+			<div>
+				<div>area</div>
+				<input name='area'
+				    value="{{c['area']}}">
+				</div>	
+			</div>
+			<div>
+				<div>tld</div>
+				<input name='tld'
+				    value="{{c['tld']}}">
+				</div>
+			<div>
+				<div>GDP (million $)</div>
+				<input name='gdp'
+				    value="{{c['gdp']}}">
+				</div>
+			<div>
+				<div>flag </div>
+				<input name='flag'
+				    value="{{c['flag']}}">
+				</div>
+				
+			</div>
+		</div>
+		<input type='submit'>
+	</form>
+		
+	</body>
+</html>
