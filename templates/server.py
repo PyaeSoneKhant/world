@@ -78,34 +78,31 @@ def editCountryByNamePage(n):
 
 @app.route('/addCountryByName/')
 def AddCountryByNamePage():
-    c=None
-    return render_template(
-    'country_add.html',
+	c=None
+	return render_template(
+   	'country_add.html',
     c=c
     )
 
 @app.route('/AddCountry/')
 def addCountryByNamePage():
-    c=None
-    for x in w:
-        c=x
-        c['name']=request.args.get('name')
-        c['capital']=request.args.get('capital')
-        c['continent']=request.args.get('continent')
-        c['tld']=request.args.get('tld')
-        c['population']=request.args.get('population')
-        c['area']=request.args.get('area')
-        c['gdp']=request.args.get('gdp')
-        c['flag']=request.args.get('flag')
-        break
-    w.append(c)
-    return render_template(
-    'country_added.html',
-    c=c,
-    )
-
-
-
+  c=None
+  for x in w:	
+  		c=x 
+  		c['name']=request.args.get('name')
+  		c['capital']=request.args.get('capital')
+  		c['continent']=request.args.get('continent')
+  		c['tld']=request.args.get('tld')
+  		c['population']=request.args.get('population')
+  		c['area']=request.args.get('area')
+  		c['gdp']=request.args.get('gdp')
+  		c['flag']=request.args.get('flag')
+  		break
+  		w.append(c)
+  		return render_template(
+  		'country_added.html',
+  		c=c,
+  		)
 @app.route('/updateCountryByName')
 def updateCountryByNamePage():
 	n = request.args.get('name')
