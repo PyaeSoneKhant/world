@@ -1,11 +1,6 @@
-<!doctype html>
+{% extends "base.html" %}
 <!--continent.html-->
-<html>
-<head>
-	<link rel='stylesheet' href='/static/style.css'>
-</head>
-		<body style="background-image:url('bg.jpg')">
-		<h1>{{a}}</h1>
+{% block content %}
 		<div>There are {{length_of_cl}} countries in {{a}}</div>
 		<ul>
 			{% for c in cl %}
@@ -14,5 +9,4 @@
 			 {{c.name}}</a></li>
 			{% endfor %}
 		</ul>
-	</body>
-</html>
+{% endblock %}	

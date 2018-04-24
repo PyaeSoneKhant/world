@@ -1,15 +1,8 @@
-<!doctype html>
 <!--index.html-->
-<html>
-<head>
-	<link rel='stylesheet' href='/static/style.css'>
-</head>
-	<body>
-		<div class="container"></div>
-		<header>
-		<h1>Welcome from World Factbook</h1>
-		</header>
+{% extends "base.html" %}
+{% block content %}
 		<div>There are {{w|length}} countries in in the world.</div>
+		
 		<ul>
 			{% for c in w %}
 			<li><a href='/countryByName/{{c.name}}'> 
@@ -27,13 +20,7 @@
 		<div class="new-button">
 		<a href="/addCountryByName/">New Country</a>
 		</div>
-	<div>
-		{% for s in lota %}
-		<a href="/startingWith/{{s}}">{{s}}</a>
-		{% endfor %}
-	</div>
-
-	<div class="nav_foot">
+	<!--<div class="nav_foot">
 		<a href='/startingWith/A'>A</a>
 		<a href='/startingWith/B'>B</a>
 		<a href='/startingWith/C'>C</a>
@@ -60,9 +47,7 @@
 		<a href='/startingWith/X'>X</a>
 		<a href='/startingWith/Y'>Y</a>
 		<a href='/startingWith/Z'>Z</a>
-	</div>
+	</div>-->
 
 		<footer>Copyright@World Factbook,Develop by PyaeSoneKhant</footer>
-	</div>
-	</body>
-</html>
+{% endblock %}

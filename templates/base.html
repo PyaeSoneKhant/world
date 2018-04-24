@@ -1,0 +1,27 @@
+<!doctype html>
+<!--base.html-->
+<html>
+<head>
+	<link rel='stylesheet' href='/static/styles.css'>
+</head>
+		<body>
+		<header>
+		<h1>Welcome from World Factbook</h1>
+		</header>
+		<div>
+			<form>
+				<ul id="sort">
+					{% for s in lota %}
+					<a href="/startingWith/{{s}}">{{s}}</a>
+					{% endfor %}		
+				
+				</ul>
+			</form>	
+		</div>
+		<div>
+			{% block content %}
+			{% endblock %}
+			
+		</div>
+	</body>
+</html>

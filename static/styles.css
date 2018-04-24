@@ -1,4 +1,4 @@
-body{
+ body{
 	font-family:arial;
     background-color:cyan;
     background-image: url("a.jpg");
@@ -39,7 +39,7 @@ a{
     display: inline-block;
     background-color: cyan;
 }
-.delete-button{
+.delete-button:hover{
     border: solid thin black;
     padding: 1ex;
     margin:1ex;
@@ -48,11 +48,12 @@ a{
     text-align: center;
     background-color: cyan;
     display: inline-block;
-
+    background-color: red;
 }
 .nav_foot{
-    color: cyan;
-    padding: 2ex;
+    background: cyan;
+    padding: 1ex;
+   
 
 }
 
@@ -77,6 +78,7 @@ a{
     text-align: center;
     background-color: cyan;
     display: inline-block;
+   
 
 }
 header{
@@ -103,4 +105,15 @@ ul{
 ul li{
     
     width: 200px;
+}
+ul#sort a:link{
+    background-color:#4162f4;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    list-style-type: none;
+}
+ul#sort a:hover{
+    background-color: red;
 }

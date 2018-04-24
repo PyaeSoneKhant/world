@@ -47,7 +47,8 @@ def staringWithAlphabetic(a):
 		'continent.html',
 		length_of_cl = len(cl),
 		cl = cl,
-		a = a
+		a = a,
+		lota=lota
 		)
 
 @app.route('/country/<i>')
