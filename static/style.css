@@ -50,6 +50,12 @@ a{
     display: inline-block;
 
 }
+.nav_foot{
+    background-color: cyan;
+    padding: 2ex;
+
+}
+
 .edit-button{
     border: solid thin black;
     padding: 1ex;

@@ -37,6 +37,16 @@ def continentPage(a):
 		a = a
 		)
 
+@app.route('/startingWith/<a>')
+def firstLetterPage(a):
+	cl = [c for c in w if c['name'][0]==a]
+	return render_template(
+		'continent.html',
+		length_of_cl = len(cl),
+		cl = cl,
+		a = a
+		)
+
 @app.route('/country/<i>')
 def countryPage(i):
 	return render_template(

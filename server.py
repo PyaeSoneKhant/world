@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import json
 
 w = json.load(open("worldl.json"))
+lota= sorted(list(set([c['name'][0]for c in w])))
+print(lota)
 for c in w:
 	c['tld'] = c['tld'][1:]
 page_size = 20
@@ -12,7 +14,8 @@ def mainPage():
 	return render_template('index.html',
 		page_number = 0,
 		page_size = page_size,
-		w = w[0:page_size])
+		w = w[0:page_size],
+		lota=lota)
 
 @app.route('/begin/<b>')
 def beginPage(b):
@@ -22,7 +25,8 @@ def beginPage(b):
 		return render_template('index.html',
 		w = w[bn:bn+page_size],
 		page_number = bn,
-		page_size = page_size
+		page_size = page_size,
+		lota=lota
 		)
 	except:
 		return "error"
@@ -30,6 +34,15 @@ def beginPage(b):
 @app.route('/continent/<a>')
 def continentPage(a):
 	cl = [c for c in w if c['continent']==a]
+	return render_template(
+		'continent.html',
+		length_of_cl = len(cl),
+		cl = cl,
+		a = a
+		)
+@app.route('/startingWith/<a>')
+def staringWithAlphabetic(a):
+	cl = [c for c in w if c['name'][0]==a]
 	return render_template(
 		'continent.html',
 		length_of_cl = len(cl),
