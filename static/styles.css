@@ -39,7 +39,7 @@ a{
     display: inline-block;
     background-color: cyan;
 }
-.delete-button:hover{
+.delete-button{
     border: solid thin black;
     padding: 1ex;
     margin:1ex;
@@ -48,7 +48,6 @@ a{
     text-align: center;
     background-color: cyan;
     display: inline-block;
-    background-color: red;
 }
 .nav_foot{
     background: cyan;
