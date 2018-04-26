@@ -11,8 +11,8 @@ img.big {
     width: 200px;
     border: solid thin grey;
     position: absolute;
-    right: 1ex;
-    top: 1ex;
+    right: 2ex;
+    top: 30ex;
 }
 
 .properties div div{
@@ -127,7 +127,9 @@ ul#sort a:hover{
     background-color: pink;
 }
 .head{
-       text-align: center;
-      color: black;
-
+background:blue;
+    margin: 20px 0;
+    line-height: 150px;
+    text-align: center;
+    color: white;
 }
