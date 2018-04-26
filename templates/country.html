@@ -5,6 +5,9 @@
 	<link rel='stylesheet' href='/static/styles.css'>
 </head>
 	<body background="a.jpg">
+		<div class="head">
+		<h1>Welcome from World Factbook</h1>
+		</div>
 		<h1>{{c['name']}}</h1>
 
 		<div class='properties'>
@@ -40,8 +43,8 @@
 				<div>{{c['area']}}</div>
 		</div>
 
-		<div>
-		<div><img src="/static/flags/{{c['tld']}}.gif" class='big'></div>
+		<div><img src="/static/flags/{{c['tld']}}.gif" class='big'>
+		</div>
 		</div>
 
 		<div>
@@ -55,7 +58,14 @@
 			<a href='/delete/{{c.name}}'>Delete</a>
 		</div>		
 		</div>
+
+		<div class='main-button'>
+			<a href='/'>Main</a>
 		</div>
 
+		</div>
+		
+<footer>Copyright@World Factbook,Develop by PyaeSoneKhant</footer>	
 	</body>
+
 </html>

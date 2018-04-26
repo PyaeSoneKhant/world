@@ -4,7 +4,10 @@
 <head>
 	<link rel='stylesheet' href='/static/styles.css'>
 </head>
-	<body style="background-image:url('bg.jpg')">
+	<body background="a.jpg">
+		<div class="head">
+		<h1>Welcome from World Factbook</h1>
+		</div>
 
 		<form action='/updateCountryByName'>
 		<h1>{{c['name']}}</h1>
@@ -39,6 +42,10 @@
 	</form>
 		<div class='delete-button'>
 			<a href='/delete/{{c.name}}'>Delete</a>
+
 		</div>
+		
+		<footer>Copyright@World Factbook,Develop by PyaeSoneKhant</footer>	
+
 	</body>
 </html>

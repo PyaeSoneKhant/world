@@ -1,6 +1,6 @@
  body{
 	font-family:arial;
-    background-color:cyan;
+    
     background-image: url("a.jpg");
 }
 img.tiny{
@@ -40,6 +40,16 @@ a{
     background-color: cyan;
 }
 .delete-button{
+    border: solid thin black;
+    padding: 1ex;
+    margin:1ex;
+    border-radius: 0.5ex;
+    width: 15ex;
+    text-align: center;
+    background-color: cyan;
+    display: inline-block;
+}
+.main-button{
     border: solid thin black;
     padding: 1ex;
     margin:1ex;
@@ -115,4 +125,9 @@ ul#sort a:link{
 }
 ul#sort a:hover{
     background-color: pink;
+}
+.head{
+       text-align: center;
+      color: black;
+
 }
